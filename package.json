@@ -1,11 +1,21 @@
 {
   "name": "urlshortner-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "I am creating a urlshortner project simillar to cuttly or bitly and this is the backend of it.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mohammad Ashikul Islam",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
