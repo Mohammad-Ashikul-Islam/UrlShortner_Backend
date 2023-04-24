@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
-const nanoid = require("nanoid");
+const ShortUniqueId = require("short-unique-id");
 
 const UrlDataSchema = new mongoose.Schema(
     {
         longUrl: { type: String, required: true, unique: true },
         shortUrlCode: { type: String, required: true, unique: true,
-                    default: nanoid(10)
+                    default: new ShortUniqueId({length: 10})()
         },
         visitCount: { type: Number, required: true,
                     default: 0            
