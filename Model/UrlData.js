@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
-const ShortUniqueId = require("short-unique-id");
 
 const UrlDataSchema = new mongoose.Schema(
     {
-        longUrl: { type: String, required: true, unique: true },
-        shortUrlCode: { type: String, required: true, unique: true,
-                    default: new ShortUniqueId({length: 10})()
+        longUrl: { type: String, required: true },
+        shortUrlCode: { type: String, required: true, unique: true
         },
         visitCount: { type: Number, required: true,
                     default: 0            
