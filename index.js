@@ -7,9 +7,8 @@ const findUrl = require("./Routes/findUrl");
 
 const cors = require("cors")
 dotenv.config();
-//Connect Database
-//In case of running locally, Please Replace the env Url with my Url link from commented below or Your custom MongoDB Url link
-mongoose.connect(process.env.MONGO_URL,{dbName:"UrlShortnerProject"}) //MONGO_URL = mongodb+srv://UrlShortner:UrlShortner1234@cluster1.4px0nat.mongodb.net/?retryWrites=true&w=majority
+//Connect Databasek
+mongoose.connect(process.env.MONGO_URL,{dbName:"UrlShortnerProject"}) 
 .then(() => console.log("DB coneection sucessful"))
 .catch((err) => {
     console.log(err);
